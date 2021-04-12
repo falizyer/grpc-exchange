@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <Protobuf Include="Protos\Auction.proto" GrpcServices="Server" ProtoRoot="."/>
+        <Protobuf Include="Protos\HealthCheck.proto" GrpcServices="Server" ProtoRoot="."/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "FixProtocol.Core";
+
+package Protos;
+
+service Auction {
+  rpc SubmitOrder (OrderRequest) returns (OrderResponse);
+}
+
+message OrderRequest {
+  enum MessageType {
+    NONE = 0;
+    NEW_ORDER = 8;
+  };
+  MessageType messageType = 1;
+}
+
+message OrderResponse {
+}
